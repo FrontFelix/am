@@ -26,6 +26,7 @@ import LinkedIcon from "../components/icons/LinkedIn";
 import FacebooIcon from "../components/icons/FacebookIcon";
 import { staffTeam } from "./api/staff";
 import { Swiper, SwiperSlide } from "swiper/react";
+import 'swiper/css/bundle';
 import { Navigation, Pagination } from "swiper";
 
 export default function Home() {
@@ -72,8 +73,9 @@ export default function Home() {
             <Spacer />
             <Box mt={{ base: "2rem", lg: "0" }}>
               <Image
-                width={20}
-                height={20}
+                width={300}
+                height={300}
+                style={{"margin": "0 auto", "display": "block"}}
                 src={"/images/placeHolder.png"}
                 alt="placeholder"
               />
@@ -334,29 +336,72 @@ export default function Home() {
           <Text textStyle="h4">Our art</Text>
           <Text textStyle="h2">AM NFTS</Text>
           <Box py={"2rem"}>
+            <Flex>
+              <Button display={"block"} alignSelf={"center"} id="prevBtn">Prev</Button>
             <Swiper
-              slidesPerView={3}
-              centeredSlides={true}
-              spaceBetween={30}
+              slidesPerView={2}
               pagination={{
-                type: "fraction",
+                type: "bullets",
               }}
-              navigation={true}
+              navigation={{
+                nextEl: "#nextBtn",
+                prevEl: "#prevBtn"
+              }}
               modules={[Pagination, Navigation]}
             >
-              <SwiperSlide>Slide 1</SwiperSlide>
-              <SwiperSlide>Slide 2</SwiperSlide>
-              <SwiperSlide>Slide 3</SwiperSlide>
-              <SwiperSlide>Slide 4</SwiperSlide>
-              <SwiperSlide>Slide 5</SwiperSlide>
-              <SwiperSlide>Slide 6</SwiperSlide>
-              <SwiperSlide>Slide 7</SwiperSlide>
-              <SwiperSlide>Slide 8</SwiperSlide>
-              <SwiperSlide>Slide 9</SwiperSlide>
+              <SwiperSlide>
+                <Box px={"2rem"} w="20rem" minH="20rem" pos="relative">
+                  <Image layout="fill" alt="test" src={'/images/nft.png'}></Image>
+                </Box>
+              </SwiperSlide>
+              <SwiperSlide>
+              <Box px={"2rem"} w="20rem" minH="20rem" pos="relative">
+                  <Image layout="fill" alt="test" src={'/images/nft.png'}></Image>
+                </Box>
+              </SwiperSlide>
+              <SwiperSlide>
+              <Box px={"2rem"} w="15rem" minH="20rem" pos="relative">
+                  <Image layout="fill" alt="test" src={'/images/nft.png'}></Image>
+                </Box>
+              </SwiperSlide>
+              <SwiperSlide>
+              <Box px={"2rem"} w="20rem" minH="20rem" pos="relative">
+                  <Image layout="fill" alt="test" src={'/images/nft.png'}></Image>
+                </Box>
+              </SwiperSlide>
+              <SwiperSlide>
+                               <Box px={"2rem"} w="20rem" minH="20rem" pos="relative">
+                  <Image layout="fill" alt="test" src={'/images/nft.png'}></Image>
+                </Box>
+              </SwiperSlide>
+              <SwiperSlide>
+                               <Box px={"2rem"} w="20rem" minH="20rem" pos="relative">
+                  <Image layout="fill" alt="test" src={'/images/nft.png'}></Image>
+                </Box>
+              </SwiperSlide>
+              <SwiperSlide>
+                               <Box px={"2rem"} w="20rem" minH="20rem" pos="relative">
+                  <Image layout="fill" alt="test" src={'/images/nft.png'}></Image>
+                </Box>
+              </SwiperSlide>
+              <SwiperSlide>
+                               <Box px={"2rem"} w="10rem" minH="20rem" pos="relative">
+                  <Image layout="fill" alt="test" src={'/images/nft.png'}></Image>
+                </Box>
+              </SwiperSlide>
+              <SwiperSlide>
+                               <Box px={"2rem"} w="20rem" minH="20rem" pos="relative">
+                  <Image layout="fill" alt="test" src={'/images/nft.png'}></Image>
+                </Box>
+              </SwiperSlide>
             </Swiper>
+            <Button display={"block"} alignSelf={"center"} id="nextBtn">Next</Button>
+            </Flex>
           </Box>
         </Box>
         {/* NFT SHOWCASE */}
+        {/* FAQ */}
+        {/* FAQ */}
       </Container>
     </div>
   );
