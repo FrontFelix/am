@@ -15,8 +15,8 @@ import { secondaryButtonHover } from "../themes/hoverStyles";
 export default function Navbar() {
   return (
     <Container py={"2rem"} maxW={"1500px"}>
-      <Flex alignItems="center">
-        <Box>
+      <Flex justifyContent={"space-between"} alignItems="center">
+        <Box w={"25%"}>
           <Text textStyle="Logo">AM</Text>
           {/* <Image
             width={20}
@@ -26,9 +26,9 @@ export default function Navbar() {
             src={"/images/logo.png"}
           /> */}
         </Box>
-        <Spacer display={{ base: "none", md: "none", lg: "block" }} />
-        <Box display={{ base: "none", md: "none", lg: "flex" }}>
-          <Flex justifyContent="space-around">
+        {/* <Spacer display={{ base: "none", md: "none", lg: "block" }} /> */}
+        <Box w={"50%"} display={{ base: "none", md: "none", lg: "flex" }}>
+          <Flex justifyContent={"center"} w={"100%"}>
             <a href="">
               <p>Team</p>
             </a>
@@ -40,8 +40,8 @@ export default function Navbar() {
             </Link>
           </Flex>
         </Box>
-        <Spacer />
-        <Box>
+        {/* <Spacer /> */}
+        <Box w={"25%"}>
           <Flex>
             <IconButton
               display={{ base: "none", md: "none", lg: "block" }}

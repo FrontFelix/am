@@ -253,8 +253,8 @@ export default function Home() {
             mt={"2rem"}
             justifyContent={{ base: "center", lg: "space-between" }}
           >
-            {staffTeam.map((member) => (
-              <Box w={{ base: "100%", lg: "33%" }}>
+            {staffTeam.map((member, i) => (
+              <Box key={i} w={{ base: "100%", lg: "33%" }}>
                 <Link key={member.name} href={`staff/${member.name}`}>
                   <Box
                     m={{ base: "0 auto", lg: "0" }}
