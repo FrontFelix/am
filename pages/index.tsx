@@ -26,8 +26,11 @@ import LinkedIcon from "../components/icons/LinkedIn";
 import FacebooIcon from "../components/icons/FacebookIcon";
 import { staffTeam } from "./api/staff";
 import { Swiper, SwiperSlide } from "swiper/react";
-import 'swiper/css/bundle';
+import "swiper/css/bundle";
 import { Navigation, Pagination } from "swiper";
+import { padding } from "@mui/system";
+import { useState } from "react";
+import Faq from "../components/faq";
 
 export default function Home() {
   const profileRoleText = chakra(motion.text, {
@@ -75,7 +78,7 @@ export default function Home() {
               <Image
                 width={300}
                 height={300}
-                style={{"margin": "0 auto", "display": "block"}}
+                style={{ margin: "0 auto", display: "block" }}
                 src={"/images/placeHolder.png"}
                 alt="placeholder"
               />
@@ -189,9 +192,7 @@ export default function Home() {
             borderRadius={"2rem"}
             height={"100%"}
             width={"110%"}
-            bg={
-              "url('https://abcmallorcastorage.blob.core.windows.net/images/2014/08/artist-stduio-mallorca.jpg')"
-            }
+            bg={`url("https://abcmallorcastorage.blob.core.windows.net/images/2014/08/artist-stduio-mallorca.jpg")`}
             position={{ base: "unset", lg: "absolute" }}
           ></Box>
           <Box
@@ -229,7 +230,7 @@ export default function Home() {
             </Text>
             <Text textAlign={{ base: "center", lg: "left" }} pb={"1.4rem"}>
               Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
+              industry. Lorem Ipsum has been the industrys standard dummy text
               ever since the 1500s, when an unknown
             </Text>
             <Button
@@ -257,7 +258,7 @@ export default function Home() {
               <Box key={i} w={{ base: "100%", lg: "33%" }}>
                 <Link key={member.name} href={`staff/${member.name}`}>
                   <Box
-                    m={{ base: "0 auto", lg: "0" }}
+                    m={{ base: "0 auto", lg: "0 auto" }}
                     maxW={"70%"}
                     pos={"relative"}
                   >
@@ -337,70 +338,136 @@ export default function Home() {
           <Text textStyle="h2">AM NFTS</Text>
           <Box py={"2rem"}>
             <Flex>
-              <Button display={"block"} alignSelf={"center"} id="prevBtn">Prev</Button>
-            <Swiper
-              slidesPerView={2}
-              pagination={{
-                type: "bullets",
-              }}
-              navigation={{
-                nextEl: "#nextBtn",
-                prevEl: "#prevBtn"
-              }}
-              modules={[Pagination, Navigation]}
-            >
-              <SwiperSlide>
-                <Box px={"2rem"} w="20rem" minH="20rem" pos="relative">
-                  <Image layout="fill" alt="test" src={'/images/nft.png'}></Image>
-                </Box>
-              </SwiperSlide>
-              <SwiperSlide>
-              <Box px={"2rem"} w="20rem" minH="20rem" pos="relative">
-                  <Image layout="fill" alt="test" src={'/images/nft.png'}></Image>
-                </Box>
-              </SwiperSlide>
-              <SwiperSlide>
-              <Box px={"2rem"} w="15rem" minH="20rem" pos="relative">
-                  <Image layout="fill" alt="test" src={'/images/nft.png'}></Image>
-                </Box>
-              </SwiperSlide>
-              <SwiperSlide>
-              <Box px={"2rem"} w="20rem" minH="20rem" pos="relative">
-                  <Image layout="fill" alt="test" src={'/images/nft.png'}></Image>
-                </Box>
-              </SwiperSlide>
-              <SwiperSlide>
-                               <Box px={"2rem"} w="20rem" minH="20rem" pos="relative">
-                  <Image layout="fill" alt="test" src={'/images/nft.png'}></Image>
-                </Box>
-              </SwiperSlide>
-              <SwiperSlide>
-                               <Box px={"2rem"} w="20rem" minH="20rem" pos="relative">
-                  <Image layout="fill" alt="test" src={'/images/nft.png'}></Image>
-                </Box>
-              </SwiperSlide>
-              <SwiperSlide>
-                               <Box px={"2rem"} w="20rem" minH="20rem" pos="relative">
-                  <Image layout="fill" alt="test" src={'/images/nft.png'}></Image>
-                </Box>
-              </SwiperSlide>
-              <SwiperSlide>
-                               <Box px={"2rem"} w="10rem" minH="20rem" pos="relative">
-                  <Image layout="fill" alt="test" src={'/images/nft.png'}></Image>
-                </Box>
-              </SwiperSlide>
-              <SwiperSlide>
-                               <Box px={"2rem"} w="20rem" minH="20rem" pos="relative">
-                  <Image layout="fill" alt="test" src={'/images/nft.png'}></Image>
-                </Box>
-              </SwiperSlide>
-            </Swiper>
-            <Button display={"block"} alignSelf={"center"} id="nextBtn">Next</Button>
+              <Button
+                mr={"1rem"}
+                display={"block"}
+                alignSelf={"center"}
+                id="prevBtn"
+              >
+                Prev
+              </Button>
+              <Swiper
+                slidesPerView={4}
+                spaceBetween={40}
+                autoplay={true}
+                pagination={{
+                  type: "bullets",
+                }}
+                navigation={{
+                  nextEl: "#nextBtn",
+                  prevEl: "#prevBtn",
+                }}
+                modules={[Pagination, Navigation]}
+              >
+                <SwiperSlide>
+                  <Box w="100%" minH="20rem" pos="relative">
+                    <Image
+                      layout="fill"
+                      alt="test"
+                      src={"/images/nft.png"}
+                      style={{
+                        objectFit: "cover",
+                      }}
+                    ></Image>
+                  </Box>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <Box w="100%" minH="20rem" pos="relative">
+                    <Image
+                      layout="fill"
+                      alt="test"
+                      src={"/images/nft.png"}
+                      style={{ objectFit: "cover" }}
+                    ></Image>
+                  </Box>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <Box w="100%" minH="20rem" pos="relative">
+                    <Image
+                      layout="fill"
+                      alt="test"
+                      src={"/images/nft.png"}
+                      style={{ objectFit: "cover" }}
+                    ></Image>
+                  </Box>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <Box w="100%" minH="20rem" pos="relative">
+                    <Image
+                      layout="fill"
+                      alt="test"
+                      src={"/images/nft.png"}
+                      style={{ objectFit: "cover" }}
+                    ></Image>
+                  </Box>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <Box w="100%" minH="20rem" pos="relative">
+                    <Image
+                      layout="fill"
+                      alt="test"
+                      src={"/images/nft.png"}
+                      style={{ objectFit: "cover" }}
+                    ></Image>
+                  </Box>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <Box w="100%" minH="20rem" pos="relative">
+                    <Image
+                      layout="fill"
+                      alt="test"
+                      src={"/images/nft.png"}
+                      style={{ objectFit: "cover" }}
+                    ></Image>
+                  </Box>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <Box w="100%" minH="20rem" pos="relative">
+                    <Image
+                      layout="fill"
+                      alt="test"
+                      src={"/images/nft.png"}
+                      style={{ objectFit: "cover" }}
+                    ></Image>
+                  </Box>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <Box w="100%" minH="20rem" pos="relative">
+                    <Image
+                      layout="fill"
+                      alt="test"
+                      src={"/images/nft.png"}
+                      style={{ objectFit: "cover" }}
+                    ></Image>
+                  </Box>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <Box w="100%" minH="20rem" pos="relative">
+                    <Image
+                      layout="fill"
+                      alt="test"
+                      src={"/images/nft.png"}
+                      style={{ objectFit: "cover" }}
+                    ></Image>
+                  </Box>
+                </SwiperSlide>
+              </Swiper>
+              <Button
+                ml={"1rem"}
+                display={"block"}
+                alignSelf={"center"}
+                id="nextBtn"
+              >
+                Next
+              </Button>
             </Flex>
           </Box>
         </Box>
         {/* NFT SHOWCASE */}
         {/* FAQ */}
+        <Text textStyle="h4">Frequently asked questions</Text>
+        <Text textStyle="h2">FAQ</Text>
+        <Faq />
         {/* FAQ */}
       </Container>
     </div>
