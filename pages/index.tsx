@@ -39,7 +39,7 @@ export default function Home() {
 
   return (
     <div className="">
-      <Container pt={{ base: "0rem", lg: "2rem" }} maxW="1200px">
+      <Container pt={{ base: "6rem", lg: "6rem" }} maxW="1200px">
         <div className="topDiv">
           <Flex
             flexDirection={{ base: "column", lg: "row" }}
@@ -87,7 +87,7 @@ export default function Home() {
         </div>
         <Box
           overflow={"visible"}
-          my={{ base: "5rem", lg: "2rem" }}
+          my={{ base: "5rem", lg: "9rem" }}
           className="heroDiv"
         >
           <Box
@@ -335,7 +335,7 @@ export default function Home() {
         {/* Team Showcase */}
 
         {/* NFT SHOWCASE */}
-        <Box>
+        <Box mt={{ base: "", lg: "7rem" }}>
           <Text textStyle="h4">Our art</Text>
           <Text textStyle="h2">AM NFTS</Text>
           <Box py={"2rem"}>
@@ -373,84 +373,52 @@ export default function Home() {
                     />
                   </Box>
                 </SwiperSlide>
-                <SwiperSlide>
+                <SwiperSlide style={{ width: "20rem" }}>
                   <Box w="100%" minH="20rem" pos="relative">
                     <Image
                       layout="fill"
                       alt="test"
                       src={"/images/nft.png"}
-                      style={{ objectFit: "cover" }}
+                      style={{
+                        objectFit: "cover",
+                      }}
                     />
                   </Box>
                 </SwiperSlide>
-                <SwiperSlide>
+                <SwiperSlide style={{ width: "20rem" }}>
                   <Box w="100%" minH="20rem" pos="relative">
                     <Image
                       layout="fill"
                       alt="test"
                       src={"/images/nft.png"}
-                      style={{ objectFit: "cover" }}
+                      style={{
+                        objectFit: "cover",
+                      }}
                     />
                   </Box>
                 </SwiperSlide>
-                <SwiperSlide>
+                <SwiperSlide style={{ width: "20rem" }}>
                   <Box w="100%" minH="20rem" pos="relative">
                     <Image
                       layout="fill"
                       alt="test"
                       src={"/images/nft.png"}
-                      style={{ objectFit: "cover" }}
-                    ></Image>
+                      style={{
+                        objectFit: "cover",
+                      }}
+                    />
                   </Box>
                 </SwiperSlide>
-                <SwiperSlide>
+                <SwiperSlide style={{ width: "20rem" }}>
                   <Box w="100%" minH="20rem" pos="relative">
                     <Image
                       layout="fill"
                       alt="test"
                       src={"/images/nft.png"}
-                      style={{ objectFit: "cover" }}
-                    ></Image>
-                  </Box>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <Box w="100%" minH="20rem" pos="relative">
-                    <Image
-                      layout="fill"
-                      alt="test"
-                      src={"/images/nft.png"}
-                      style={{ objectFit: "cover" }}
-                    ></Image>
-                  </Box>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <Box w="100%" minH="20rem" pos="relative">
-                    <Image
-                      layout="fill"
-                      alt="test"
-                      src={"/images/nft.png"}
-                      style={{ objectFit: "cover" }}
-                    ></Image>
-                  </Box>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <Box w="100%" minH="20rem" pos="relative">
-                    <Image
-                      layout="fill"
-                      alt="test"
-                      src={"/images/nft.png"}
-                      style={{ objectFit: "cover" }}
-                    ></Image>
-                  </Box>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <Box w="100%" minH="20rem" pos="relative">
-                    <Image
-                      layout="fill"
-                      alt="test"
-                      src={"/images/nft.png"}
-                      style={{ objectFit: "cover" }}
-                    ></Image>
+                      style={{
+                        objectFit: "cover",
+                      }}
+                    />
                   </Box>
                 </SwiperSlide>
               </Swiper>
@@ -467,7 +435,7 @@ export default function Home() {
         </Box>
         {/* NFT SHOWCASE */}
         {/* FAQ */}
-        <Text mt={"2rem"} textStyle="h4">
+        <Text mt={"7rem"} textStyle="h4">
           Frequently asked questions
         </Text>
         <Text textStyle="h2">FAQ</Text>
