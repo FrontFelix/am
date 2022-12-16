@@ -47,7 +47,7 @@ export default function Faq() {
     },
   };
   return (
-    <Box my={"2rem"}>
+    <Box mt={"2rem"}>
       <Text
         w={{ base: "100%", lg: "50%" }}
         bg={"#2e2d2a"}

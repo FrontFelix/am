@@ -273,7 +273,7 @@ export default function Home() {
                       alt="person"
                       src={member.imageSrc}
                       whileHover={{ scale: 1.05 }}
-                      layoutId="1"
+                      layoutId={i.toString()}
                     />
                     <Flex
                       flexDir={"column"}
@@ -311,21 +311,23 @@ export default function Home() {
                     </Flex>
                   </Box>
                 </Link>
-                <Text
-                  textAlign={{ base: "center", lg: "left" }}
-                  pt={"1rem"}
-                  textStyle="profile"
-                >
-                  {member.name}
-                </Text>
-                <Text
-                  as={motion.h1}
-                  textAlign={{ base: "center", lg: "left" }}
-                  textStyle="profileSmall"
-                  layoutId="role"
-                >
-                  {member.role}
-                </Text>
+                <Box maxW={"70%"} margin={"0 auto"}>
+                  <Text
+                    textAlign={{ base: "center", lg: "left" }}
+                    pt={"1rem"}
+                    textStyle="profile"
+                  >
+                    {member.name}
+                  </Text>
+                  <Text
+                    as={motion.h1}
+                    textAlign={{ base: "center", lg: "left" }}
+                    textStyle="profileSmall"
+                    layoutId={`role ${i.toString()}`}
+                  >
+                    {member.role}
+                  </Text>
+                </Box>
               </Box>
             ))}
           </Flex>
@@ -359,7 +361,7 @@ export default function Home() {
                 }}
                 modules={[Pagination, Navigation]}
               >
-                <SwiperSlide>
+                <SwiperSlide style={{ width: "20rem" }}>
                   <Box w="100%" minH="20rem" pos="relative">
                     <Image
                       layout="fill"
@@ -368,7 +370,7 @@ export default function Home() {
                       style={{
                         objectFit: "cover",
                       }}
-                    ></Image>
+                    />
                   </Box>
                 </SwiperSlide>
                 <SwiperSlide>
@@ -378,7 +380,7 @@ export default function Home() {
                       alt="test"
                       src={"/images/nft.png"}
                       style={{ objectFit: "cover" }}
-                    ></Image>
+                    />
                   </Box>
                 </SwiperSlide>
                 <SwiperSlide>
@@ -388,7 +390,7 @@ export default function Home() {
                       alt="test"
                       src={"/images/nft.png"}
                       style={{ objectFit: "cover" }}
-                    ></Image>
+                    />
                   </Box>
                 </SwiperSlide>
                 <SwiperSlide>
@@ -465,7 +467,9 @@ export default function Home() {
         </Box>
         {/* NFT SHOWCASE */}
         {/* FAQ */}
-        <Text textStyle="h4">Frequently asked questions</Text>
+        <Text mt={"2rem"} textStyle="h4">
+          Frequently asked questions
+        </Text>
         <Text textStyle="h2">FAQ</Text>
         <Faq />
         {/* FAQ */}
