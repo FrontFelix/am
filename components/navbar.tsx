@@ -55,6 +55,7 @@ export default function Navbar() {
                 aria-label="test"
                 icon={<HamburgerIcon state={sidebarState} />}
                 zIndex={"10"}
+                color="white"
                 onClick={() => setSideBarState(sidebarState ? false : true)}
               ></IconButton>
             </Box>

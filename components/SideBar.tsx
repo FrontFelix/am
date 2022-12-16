@@ -37,6 +37,7 @@ export default function SideBar({ state }: sidebarProps) {
         variants={animationVariants}
         style={{
           minHeight: "100vh",
+          color: "white",
           width: "100%",
           position: "fixed",
           top: "0",
