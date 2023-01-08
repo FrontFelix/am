@@ -124,22 +124,22 @@ export default function Roadmap() {
         />
         <FormStep
           headerText="Phase 3"
-          subHeaderText="The Foundations"
+          subHeaderText="Post Mint & Future"
           box1={{
-            header: "Grow",
-            text: "Building a fully organic community & a fresh and positive business growth.",
+            header: "Launch of staking program",
+            text: "After minting is completed, we will launch a staking program that provides holders who participate with many incredible rewards and long-term benefits",
           }}
           box2={{
-            header: "Brand",
-            text: "Establishing our brand effectively and efficiently in the Whisky industry with some business partnerships. ",
+            header: "Marketplace launch",
+            text: "Following the staking program launch, we will unveil a marketplace that features exclusive Albannach Mòr items, as well as other premium items.",
           }}
           box3={{
-            header: "Artwork",
-            text: "Ensuring the 5,000 NFT artwork is absolutely first class via our artists; finalists in the 2022 Scottish Design Competition.",
+            header: "Whisky",
+            text: "As part of our partnership, we will engage in a huge bulk buy that will allow holders with access to pallets and casks to lay down their whisky. ",
           }}
           box4={{
-            header: "Team",
-            text: "Fully doxxed Co-founders will bring in experienced team which includes artists, marketing & whisky experts, all with reputable knowledge.",
+            header: "Production",
+            text: "Additionally, we will commence production of several whisky bottles through our whisky partnership, which is an exciting stage for the business.",
           }}
           active={active === 3 ? "active" : ""}
         />
