@@ -29,13 +29,13 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/bundle";
 import { Navigation, Pagination } from "swiper";
 import { padding } from "@mui/system";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Faq from "../components/faq";
 
 export default function Home() {
-  const profileRoleText = chakra(motion.text, {
-    shouldForwardProp: isValidMotionProp,
-  });
+  // const profileRoleText = chakra(motion.text, {
+  //   shouldForwardProp: isValidMotionProp,
+  // });
 
   return (
     <div className="">
@@ -228,10 +228,26 @@ export default function Home() {
             >
               studio
             </Text>
-            <Text textAlign={{ base: "center", lg: "left" }} pb={"1.4rem"}>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industrys standard dummy text
-              ever since the 1500s, when an unknown
+            <Text textAlign={{ base: "center", lg: "left" }}>
+              SUUM.studio is a multimedia design studio based in Glasgow, we
+              specialise in creating 3D moving image design, incorporating
+              character, environment, lighting and VFX for film, broadcast,
+              marketing, branding and communication projects.
+            </Text>
+            <Text textAlign={{ base: "center", lg: "left" }}>
+              Our clients range from media, cultural and tech to arts,
+              entertainment, education and heritage industries. Our team of
+              talented artists and designers work alongside skilled animators,
+              editors, directors, sound designers and composers to bring ideas
+              to life.
+            </Text>
+            <Text pb={"1.4rem"} textAlign={{ base: "center", lg: "left" }}>
+              Our work has been featured on BBC, Sky Arts, Channel 4, Channel 5
+              and National Geographic Channel, in addition to being experienced
+              across web, social and mobile platforms. We love creating
+              authentic and immersive worlds, where audiences can experience
+              something meaningful that moves them, connects with them and
+              brightens up their world.
             </Text>
             <Button
               display="block"

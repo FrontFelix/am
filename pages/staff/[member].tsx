@@ -4,28 +4,28 @@ import { getStaff, getStaffs, StaffTeam } from "../api/staff";
 
 export default function MemberPage({ member }: any) {
   return (
-    <Box>
+    <Box mb={"30rem"}>
       <motion.img
         style={{
           objectFit: "cover",
-          width: "60rem",
+          objectPosition: "top",
+          width: "100%",
           height: "100vh",
           position: "absolute",
           top: "0",
-          opacity: ".3",
-          filter: "drop-shadow(13px 0px 0px #525252)",
+          opacity: ".1",
         }}
         src={member.imageSrc}
         layoutId="1"
       />
       <Container
         pos={"relative"}
-        mt={{ base: "0", lg: "10rem" }}
+        mt={{ base: "0", lg: "3rem" }}
         maxW={"1200px"}
       >
-        <Flex px={".5rem"} pt={"2rem"} flexDir={{ base: "column", lg: "row" }}>
-          <Box alignSelf={"center"} w={{ base: "100%", lg: "33%" }}></Box>
-          <Box width={{ base: "100%", lg: "66%" }} px={"4rem"}>
+        <Flex px={".5rem"} pt={"0rem"} flexDir={{ base: "column", lg: "row" }}>
+          {/* <Box alignSelf={"center"} w={{ base: "100%", lg: "10%" }}></Box> */}
+          <Box width={{ base: "100%" }} px={"2rem"}>
             <Text
               textAlign={{ base: "center", lg: "left" }}
               fontSize={{ base: "1rem", lg: "2rem" }}
@@ -34,25 +34,29 @@ export default function MemberPage({ member }: any) {
             >
               {member.name}
             </Text>
-            <Text pt={"1rem"}>{member.description.row1}</Text>
-            <Text py={"1rem"}>{member.description.row2}</Text>
-            <Text>{member.description.row3}</Text>
+            <Text
+              as={motion.h1}
+              layoutId="role"
+              fontSize={"2rem"}
+              textAlign={{ base: "center", lg: "left" }}
+              textStyle="profileSmall"
+            >
+              {member.role}
+            </Text>
+            <Flex mt={"5rem"} justifyContent={"space-between"}>
+              <Text textStyle="profile" pr={"8rem"}>
+                BIO
+              </Text>
+              <Box>
+                <Text fontSize={"1.2rem"}>{member.description.row1}</Text>
+                <Text fontSize={"1.2rem"} py={"1rem"}>
+                  {member.description.row2}
+                </Text>
+                <Text fontSize={"1.2rem"}>{member.description.row3}</Text>
+              </Box>
+            </Flex>
           </Box>
         </Flex>
-        <Text
-          as={motion.h1}
-          layoutId="role"
-          fontSize={"2rem"}
-          sx={{ writingMode: "vertical-rl" }}
-          pos={"absolute"}
-          minH={"40rem"}
-          top={"0"}
-          right={"0"}
-          textAlign={{ base: "center", lg: "left" }}
-          textStyle="profileSmall"
-        >
-          {member.role}
-        </Text>
       </Container>
     </Box>
   );

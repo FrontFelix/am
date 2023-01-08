@@ -12,10 +12,12 @@ import {
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { secondaryButtonHover } from "../themes/hoverStyles";
+import { useUserContext } from "../utils/context/userContext";
 import HamburgerIcon from "./icons/hamburgerIcon";
 import SideBar from "./SideBar";
 
 export default function Navbar() {
+  const { signIn, signedInUser } = useUserContext();
   const [sidebarState, setSideBarState] = useState(false);
   return (
     <Box zIndex={"100"} position={{ base: "absolute", xl: "unset" }} w="100%">
@@ -65,13 +67,16 @@ export default function Navbar() {
               <IconButton mx=".5rem" aria-label="test"></IconButton>
               <IconButton aria-label="test"></IconButton>
               <Switch alignSelf={"center"} colorScheme="yellow" />
-              <Button
-                mx=".5rem"
-                variant="Secondary"
-                _hover={secondaryButtonHover}
-              >
-                Login
-              </Button>
+              {!signedInUser && (
+                <Button
+                  onClick={signIn}
+                  mx=".5rem"
+                  variant="Secondary"
+                  _hover={secondaryButtonHover}
+                >
+                  Login
+                </Button>
+              )}
             </Flex>
           </Box>
         </Flex>
