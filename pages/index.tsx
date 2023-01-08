@@ -21,16 +21,11 @@ import {
 } from "../themes/hoverStyles";
 import "@splidejs/react-splide/css";
 import Roadmap from "../components/Roadmap";
-import TwitterIcon from "../components/icons/TwitterIcon";
-import LinkedIcon from "../components/icons/LinkedIn";
-import FacebooIcon from "../components/icons/FacebookIcon";
-import { staffTeam } from "./api/staff";
-import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/bundle";
-import { Navigation, Pagination } from "swiper";
-import { padding } from "@mui/system";
 import { useState } from "react";
 import Faq from "../components/faq";
+import NftSlider from "../components/NftSlider";
+import TeamShowcase from "../components/TeamShowcase";
 
 export default function Home() {
   const profileRoleText = chakra(motion.text, {
@@ -249,88 +244,7 @@ export default function Home() {
         <Box py={"3rem"}>
           <Text textStyle="h4">Meet the team</Text>
           <Text textStyle="h2">Founders</Text>
-          <Flex
-            flexDir={{ base: "column", lg: "row" }}
-            mt={"2rem"}
-            justifyContent={{ base: "center", lg: "space-between" }}
-          >
-            {staffTeam.map((member, i) => (
-              <Box key={i} w={{ base: "100%", lg: "33%" }}>
-                <Link key={member.name} href={`staff/${member.name}`}>
-                  <Box
-                    m={{ base: "0 auto", lg: "0 auto" }}
-                    maxW={"70%"}
-                    pos={"relative"}
-                  >
-                    <motion.img
-                      style={{
-                        objectFit: "cover",
-                        width: "16rem",
-                        height: "20rem",
-                        clipPath:
-                          "polygon(0 0, 91% 0, 100% 11%, 100% 100%, 25% 100%, 0 100%)",
-                      }}
-                      alt="person"
-                      src={member.imageSrc}
-                      whileHover={{ scale: 1.05 }}
-                      layoutId={i.toString()}
-                    />
-                    <Flex
-                      flexDir={"column"}
-                      top={"1.6rem"}
-                      right={"-2rem"}
-                      pos={"absolute"}
-                    >
-                      <IconButton
-                        _hover={whiteToGoldColor}
-                        transition={".3s"}
-                        variant="iconWhiteTransparent"
-                        aria-label="test"
-                        icon={<TwitterIcon />}
-                      />
-                      <IconButton
-                        transition={".3s"}
-                        py={"2rem"}
-                        variant="iconWhiteTransparent"
-                        aria-label="test"
-                        icon={<LinkedIcon />}
-                      />
-                      <IconButton
-                        transition={".3s"}
-                        variant="iconWhiteTransparent"
-                        aria-label="test"
-                        icon={<FacebooIcon />}
-                      />
-                      <Box
-                        alignSelf={"center"}
-                        mt={"2rem"}
-                        width={"2px"}
-                        height={"5rem"}
-                        bg={"#D2AC47"}
-                      ></Box>
-                    </Flex>
-                  </Box>
-                </Link>
-                <Box maxW={"70%"} margin={"0 auto"}>
-                  <Text
-                    textAlign={{ base: "center", lg: "left" }}
-                    pt={"1rem"}
-                    textStyle="profile"
-                  >
-                    {member.name}
-                  </Text>
-                  <Text
-                    as={motion.h1}
-                    textAlign={{ base: "center", lg: "left" }}
-                    textStyle="profileSmall"
-                    layoutId={`role ${i.toString()}`}
-                  >
-                    {member.role}
-                  </Text>
-                </Box>
-              </Box>
-            ))}
-          </Flex>
+          <TeamShowcase />
         </Box>
         {/* Team Showcase */}
 
@@ -338,100 +252,7 @@ export default function Home() {
         <Box mt={{ base: "", lg: "7rem" }}>
           <Text textStyle="h4">Our art</Text>
           <Text textStyle="h2">AM NFTS</Text>
-          <Box py={"2rem"}>
-            <Flex>
-              <Button
-                mr={"1rem"}
-                display={"block"}
-                alignSelf={"center"}
-                id="prevBtn"
-              >
-                Prev
-              </Button>
-              <Swiper
-                slidesPerView={4}
-                spaceBetween={40}
-                autoplay={true}
-                pagination={{
-                  type: "bullets",
-                }}
-                navigation={{
-                  nextEl: "#nextBtn",
-                  prevEl: "#prevBtn",
-                }}
-                modules={[Pagination, Navigation]}
-              >
-                <SwiperSlide style={{ width: "20rem" }}>
-                  <Box w="100%" minH="20rem" pos="relative">
-                    <Image
-                      layout="fill"
-                      alt="test"
-                      src={"/images/nft.png"}
-                      style={{
-                        objectFit: "cover",
-                      }}
-                    />
-                  </Box>
-                </SwiperSlide>
-                <SwiperSlide style={{ width: "20rem" }}>
-                  <Box w="100%" minH="20rem" pos="relative">
-                    <Image
-                      layout="fill"
-                      alt="test"
-                      src={"/images/nft.png"}
-                      style={{
-                        objectFit: "cover",
-                      }}
-                    />
-                  </Box>
-                </SwiperSlide>
-                <SwiperSlide style={{ width: "20rem" }}>
-                  <Box w="100%" minH="20rem" pos="relative">
-                    <Image
-                      layout="fill"
-                      alt="test"
-                      src={"/images/nft.png"}
-                      style={{
-                        objectFit: "cover",
-                      }}
-                    />
-                  </Box>
-                </SwiperSlide>
-                <SwiperSlide style={{ width: "20rem" }}>
-                  <Box w="100%" minH="20rem" pos="relative">
-                    <Image
-                      layout="fill"
-                      alt="test"
-                      src={"/images/nft.png"}
-                      style={{
-                        objectFit: "cover",
-                      }}
-                    />
-                  </Box>
-                </SwiperSlide>
-                <SwiperSlide style={{ width: "20rem" }}>
-                  <Box w="100%" minH="20rem" pos="relative">
-                    <Image
-                      layout="fill"
-                      alt="test"
-                      src={"/images/nft.png"}
-                      style={{
-                        objectFit: "cover",
-                      }}
-                    />
-                  </Box>
-                </SwiperSlide>
-              </Swiper>
-              <Button
-                ml={"1rem"}
-                display={"block"}
-                alignSelf={"center"}
-                id="nextBtn"
-              >
-                Next
-              </Button>
-            </Flex>
-          </Box>
+          <NftSlider />
         </Box>
         {/* NFT SHOWCASE */}
         {/* FAQ */}
