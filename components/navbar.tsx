@@ -24,7 +24,12 @@ export default function Navbar() {
       <Container py={"2rem"} maxW={"1500px"}>
         <Flex justifyContent={"space-between"} alignItems="center">
           <Box w={{ base: "50%", lg: "25%" }}>
-            <Text textStyle="Logo">AM</Text>
+            <Image
+              width={200}
+              height={200}
+              alt="test"
+              src={"/images/headerLogo.png"}
+            />
             {/* <Image
             width={20}
             height={20}

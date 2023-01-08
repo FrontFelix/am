@@ -6,29 +6,17 @@ import {
   Box,
   Button,
   Text,
-  IconButton,
-  chakra,
 } from "@chakra-ui/react";
-import { isValidMotionProp, motion } from "framer-motion";
-import Head from "next/head";
 import Image from "next/image";
-import styles from "../styles/Home.module.css";
-import Link from "next/link";
-import {
-  primaryButtonHover,
-  secondaryButtonHover,
-  whiteToGoldColor,
-} from "../themes/hoverStyles";
+import { primaryButtonHover } from "../themes/hoverStyles";
 import "@splidejs/react-splide/css";
 import Roadmap from "../components/Roadmap";
 import "swiper/css/bundle";
-import { Navigation, Pagination } from "swiper";
-import { padding } from "@mui/system";
-import { useEffect, useState } from "react";
 import Faq from "../components/faq";
 import NftSlider from "../components/NftSlider";
 import TeamShowcase from "../components/TeamShowcase";
 import ArtistSection from "../components/ArtistSection";
+import { motion } from "framer-motion";
 
 export default function Home() {
   // const profileRoleText = chakra(motion.text, {
@@ -129,7 +117,12 @@ export default function Home() {
                   }}
                 >
                   <motion.img
-                    style={{ borderRadius: ".7rem" }}
+                    style={{
+                      paddingTop: "-30px",
+                      borderRadius: ".7rem",
+                      height: "19.9rem",
+                      width: "19.9rem",
+                    }}
                     animate={{ scale: [1, 0.9, 1] }}
                     transition={{ repeat: Infinity, duration: 1.5 }}
                     alt="logo"
