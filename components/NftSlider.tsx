@@ -1,14 +1,27 @@
-import { Box, Flex, Button } from "@chakra-ui/react";
+import { Box, Flex, Button, IconButton } from "@chakra-ui/react";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper";
+import ArrowIcon from "./icons/arrowIcon";
 export default function NftSlider() {
   return (
     <Box py={"2rem"}>
       <Flex>
-        <Button mr={"1rem"} display={"block"} alignSelf={"center"} id="prevBtn">
+        {/* <Button mr={"1rem"} display={"block"} alignSelf={"center"} id="prevBtn">
           Prev
-        </Button>
+        </Button> */}
+        <IconButton
+          // dis={disNext}
+          // function={handleChange}
+          mr={"1rem"}
+          display={"block"}
+          alignSelf={"center"}
+          id="prevBtn"
+          aria-label="leftIcon"
+          // type="next"
+          icon={<ArrowIcon direction="left" />}
+          variant="iconWhiteTransparent"
+        />
         <Swiper
           slidesPerView={1}
           breakpoints={{
@@ -97,9 +110,21 @@ export default function NftSlider() {
             </Box>
           </SwiperSlide>
         </Swiper>
-        <Button ml={"1rem"} display={"block"} alignSelf={"center"} id="nextBtn">
+        {/* <Button ml={"1rem"} display={"block"} alignSelf={"center"} id="nextBtn">
           Next
-        </Button>
+        </Button> */}
+        <IconButton
+          // dis={disNext}
+          // function={handleChange}
+          ml={"1rem"}
+          display={"block"}
+          alignSelf={"center"}
+          id="nextBtn"
+          aria-label="rightIcon"
+          // type="next"
+          icon={<ArrowIcon direction="right" />}
+          variant="iconWhiteTransparent"
+        />
       </Flex>
     </Box>
   );

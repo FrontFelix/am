@@ -1,9 +1,19 @@
-import { ArrowCircleDown } from "@mui/icons-material";
+import {
+  ArrowCircleDown,
+  ArrowBackIos,
+  ArrowForwardIos,
+} from "@mui/icons-material";
 
-export default function ArrowIcon() {
+interface Props {
+  direction: string;
+}
+
+export default function ArrowIcon({ direction }: Props) {
   return (
     <span className="material-icons">
-      <ArrowCircleDown />
+      {direction === "down" && <ArrowCircleDown />}
+      {direction === "left" && <ArrowBackIos />}
+      {direction === "right" && <ArrowForwardIos />}
     </span>
   );
 }

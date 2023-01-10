@@ -44,7 +44,8 @@ a {
   top: 0;
   left: 0;
   position: absolute;
-  background-image: url("../public/images/topBg.jpg");
+  background-size: cover;
+  background-image: url("../public/images/testBG.jpg");
   filter: blur(3px);
 }
 

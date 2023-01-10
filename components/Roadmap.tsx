@@ -62,11 +62,17 @@ export default function Roadmap() {
               left: 0.1,
             }}
           />
-          <ul id="progress-num">
-            <Li n={1} active={active === 1 ? "active" : ""} />
-            <Li n={2} active={active === 2 ? "active" : ""} />
-            <Li n={3} active={active === 3 ? "active" : ""} />
-            <Li n={4} active={active === 4 ? "active" : ""} />
+          <ul
+            style={{
+              marginLeft: "-.2rem",
+              marginRight: "-.2rem",
+            }}
+            id="progress-num"
+          >
+            <Li n={1} active={active >= 1 ? "active" : ""} />
+            <Li n={2} active={active >= 2 ? "active" : ""} />
+            <Li n={3} active={active >= 3 ? "active" : ""} />
+            <Li n={4} active={active >= 4 ? "active" : ""} />
           </ul>
         </Box>
         <IconButton
@@ -124,7 +130,7 @@ export default function Roadmap() {
         />
         <FormStep
           headerText="Phase 3"
-          subHeaderText="Post Mint & Future"
+          subHeaderText="Post Mint"
           box1={{
             header: "Launch of staking program",
             text: "After minting is completed, we will launch a staking program that provides holders who participate with many incredible rewards and long-term benefits",
@@ -145,18 +151,18 @@ export default function Roadmap() {
         />
         <FormStep
           headerText="Phase 4"
-          subHeaderText="The Foundations"
+          subHeaderText="The Whisky"
           box1={{
-            header: "Grow",
-            text: "Building a fully organic community & a fresh and positive business growth.",
+            header: "Cask Ownership",
+            text: "After the completion of the staking system, we will collaborate with our partner distillery to properly age and store the whisky in casks for the benefit of our long-term holders.",
           }}
           box2={{
-            header: "Brand",
-            text: "Establishing our brand effectively and efficiently in the Whisky industry with some business partnerships. ",
+            header: "Single Malt Whisky",
+            text: "In close partnership with the distillery, we will craft a unique single malt whisky that can be purchased or earned through our AM marketplace and savored by holders worldwide.",
           }}
           box3={{
-            header: "Artwork",
-            text: "Ensuring the 5,000 NFT artwork is absolutely first class via our artists; finalists in the 2022 Scottish Design Competition.",
+            header: "The Future Plans",
+            text: "The Albannach Mòr team is committed to driving the growth and success of the business. We have ambitious plans for the future, including the development of Gen 2",
           }}
           box4={{
             header: "Team",

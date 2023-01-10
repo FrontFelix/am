@@ -1,8 +1,16 @@
 import { Box, Container, Flex, Spacer, Text } from "@chakra-ui/react";
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 import { getStaff, getStaffs, StaffTeam } from "../api/staff";
 
 export default function MemberPage({ member }: any) {
+  const [topMargin, setTopmargin] = useState(
+    member.id === "David"
+      ? "-15rem"
+      : member.id === "Justin"
+      ? "-10rem"
+      : "-7rem"
+  );
   return (
     <Box mb={"30rem"}>
       <motion.img
@@ -12,7 +20,7 @@ export default function MemberPage({ member }: any) {
           width: "100%",
           height: "100vh",
           position: "absolute",
-          top: "0",
+          top: topMargin,
           opacity: ".1",
         }}
         src={member.imageSrc}
@@ -23,12 +31,16 @@ export default function MemberPage({ member }: any) {
         mt={{ base: "0", lg: "3rem" }}
         maxW={"1200px"}
       >
-        <Flex px={".5rem"} pt={"0rem"} flexDir={{ base: "column", lg: "row" }}>
+        <Flex
+          px={".5rem"}
+          pt={{ base: "5rem", lg: "0" }}
+          flexDir={{ base: "column", lg: "row" }}
+        >
           {/* <Box alignSelf={"center"} w={{ base: "100%", lg: "10%" }}></Box> */}
           <Box width={{ base: "100%" }} px={"2rem"}>
             <Text
               textAlign={{ base: "center", lg: "left" }}
-              fontSize={{ base: "1rem", lg: "2rem" }}
+              fontSize={{ base: "1rem", lg: "3rem" }}
               pt={"1rem"}
               textStyle="profile"
             >
@@ -37,14 +49,23 @@ export default function MemberPage({ member }: any) {
             <Text
               as={motion.h1}
               layoutId="role"
-              fontSize={"2rem"}
+              fontSize={"1rem"}
               textAlign={{ base: "center", lg: "left" }}
               textStyle="profileSmall"
+              pt={{ base: ".1rem", lg: "1rem" }}
             >
               {member.role}
             </Text>
-            <Flex mt={"5rem"} justifyContent={"space-between"}>
-              <Text textStyle="profile" pr={"8rem"}>
+            <Flex
+              mt={"5rem"}
+              flexDir={{ base: "column", lg: "row" }}
+              justifyContent={"space-between"}
+            >
+              <Text
+                pb={{ base: ".5rem", lg: "0" }}
+                textStyle="profile"
+                pr={"8rem"}
+              >
                 BIO
               </Text>
               <Box>
@@ -74,7 +95,7 @@ export async function getStaticPaths() {
   const paths = members.map((user: StaffTeam) => {
     return {
       params: {
-        member: user.name,
+        member: user.id,
       },
     };
   });
