@@ -5,7 +5,7 @@ import { secondaryButtonHover } from "../themes/hoverStyles";
 export default function ArtistSection() {
   return (
     <Box py={"3rem"} my={"10rem"} position={"relative"}>
-      <Box
+      {/* <Box
         display={{ base: "none", xl: "block" }}
         top={{ base: "-100rem", lg: "-130rem" }}
         zIndex={"-2"}
@@ -21,7 +21,7 @@ export default function ArtistSection() {
           alt="wave"
           src={"/images/bg-wave.png"}
         ></Image>
-      </Box>
+      </Box> */}
       <Box
         left={{ base: "-1rem", lg: "-40rem" }}
         borderY={{ base: "8px solid #D2AC47", lg: "none" }}

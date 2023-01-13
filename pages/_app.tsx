@@ -16,7 +16,7 @@ import {
 import Navbar from "../components/navbar";
 import "material-icons/iconfont/material-icons.css";
 import "@fontsource/eagle-lake";
-import { AnimateSharedLayout } from "framer-motion";
+import { AnimateSharedLayout, useScroll } from "framer-motion";
 // import Swiper styles
 import "swiper/css";
 import { UserWrapper } from "../utils/context/userContext";
@@ -24,12 +24,18 @@ import Footer from "../components/Footer";
 
 export default function App({ Component, pageProps }: AppProps) {
   const [light, setLight] = useState(false);
+  const { scrollY } = useScroll();
+  useEffect(() => {
+    console.log(scrollY.get());
+  }, [scrollY]);
   return (
     <ChakraProvider theme={light ? lightTheme : darkTheme}>
       <UserWrapper>
         <AnimateSharedLayout>
-          <Navbar />
-          <Component {...pageProps} />
+          <Box position={"relative"} height={"100%"}>
+            <Navbar />
+            <Component {...pageProps} />
+          </Box>
           <ToastContainer />
           <Footer />
         </AnimateSharedLayout>

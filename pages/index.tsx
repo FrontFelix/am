@@ -17,6 +17,8 @@ import NftSlider from "../components/NftSlider";
 import TeamShowcase from "../components/TeamShowcase";
 import ArtistSection from "../components/ArtistSection";
 import { motion } from "framer-motion";
+import "./fonts/textFont.ttf";
+import "./fonts/titleFont.ttf";
 
 export default function Home() {
   // const profileRoleText = chakra(motion.text, {
@@ -25,41 +27,32 @@ export default function Home() {
 
   return (
     <div className="">
-      <Container pt={{ base: "6rem", lg: "6rem" }} maxW="1200px">
+      <Container pt={{ base: "6rem", lg: "8rem" }} maxW="1200px">
         <div className="topDiv">
           <Flex
             flexDirection={{ base: "column", lg: "row" }}
             alignItems={"center"}
+            justifyContent={"center"}
           >
             <Box>
-              <Text textStyle="h1" textAlign={{ base: "center", lg: "left" }}>
-                The NFTs of
+              <Text textStyle="h1" textAlign={{ base: "center" }}>
+                REVOLUZING SCOTTISH
               </Text>
-              <Text textStyle="h1" textAlign={{ base: "center", lg: "left" }}>
-                Whiskey
-              </Text>
-              <Text textStyle="p" textAlign={{ base: "center", lg: "left" }}>
-                Art that revolutionizes
-              </Text>
-              <Text
-                pb={"2rem"}
-                textAlign={{ base: "center", lg: "left" }}
-                variant="Paragraph"
-              >
-                traditional scottish whiskey.
+              <Text textStyle="h1" textAlign={{ base: "center" }}>
+                WHISKY
               </Text>
               <Button
                 px={"2rem"}
                 display={{ base: "block" }}
                 mb={"1rem"}
-                m={{ base: "0 auto", lg: "0" }}
+                m={{ base: "0 auto", lg: "0 auto" }}
                 variant="Primary"
                 _hover={primaryButtonHover}
               >
                 Join Discord
               </Button>
             </Box>
-            <Spacer />
+            {/* <Spacer />
             <Box mt={{ base: "2rem", lg: "0" }}>
               <Image
                 width={300}
@@ -68,12 +61,12 @@ export default function Home() {
                 src={"/images/placeHolder.png"}
                 alt="placeholder"
               />
-            </Box>
+            </Box> */}
           </Flex>
         </div>
         <Box
           overflow={"visible"}
-          my={{ base: "5rem", lg: "9rem" }}
+          my={{ base: "5rem", lg: "6rem" }}
           className="heroDiv"
         >
           <Box
@@ -94,7 +87,7 @@ export default function Home() {
             >
               <Box maxW={{ base: "100%", lg: "60%" }}>
                 <Text textAlign={{ base: "center", lg: "left" }} textStyle="h1">
-                  Powered by Scottish Whisky
+                  Powered by WEB3
                 </Text>
                 {/* <h1 style={{"lineHeight": "2rem"}}>Powered by Scottish Whisky</h1> */}
                 <Text textAlign={{ base: "center", lg: "left" }}>

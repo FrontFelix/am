@@ -27,7 +27,7 @@ export const darkTheme = extendTheme({
       fontFamily: `"Roboto", sans-serif`,
       fontWeight: "50",
       fontSize: "1.4rem",
-      color: "#D2AC47",
+      color: "#cf9b53",
     },
     profile: {
       color: "white",
@@ -39,7 +39,7 @@ export const darkTheme = extendTheme({
       fontFamily: `"Roboto", sans-serif`,
       fontWeight: "50",
       fontSize: "1rem",
-      color: "#D2AC47",
+      color: "#cf9b53",
     },
     Logo: {
       fontSize: "4rem",
@@ -68,7 +68,7 @@ export const darkTheme = extendTheme({
         fontFamily: `"Roboto", sans-serif`,
         fontWeight: "50",
         fontSize: "1.4rem",
-        color: "#D2AC47",
+        color: "#cf9b53",
       },
       p: {
         fontSize: "1rem",
@@ -81,7 +81,7 @@ export const darkTheme = extendTheme({
     Button: {
       variants: {
         Primary: {
-          bg: "linear-gradient(to right, white 48%, #D2AC47 50%)",
+          bg: "linear-gradient(to right, white 48%, #cf9b53 50%)",
           fontFamily: `"Roboto", sans-serif`,
           fontWeight: "600",
           backgroundPosition: "right bottom",
@@ -97,14 +97,14 @@ export const darkTheme = extendTheme({
           paddingRight: "1.3rem",
         },
         Secondary: {
-          bg: "linear-gradient(to right, #D2AC47 50%, transparent 50%)",
+          bg: "linear-gradient(to right, #cf9b53 50%, transparent 50%)",
           fontFamily: `"Roboto", sans-serif`,
           fontWeight: "600",
           backgroundPosition: "right bottom",
           transition: ".4s ease",
           backgroundSize: "200% 100%",
-          border: "6px solid #D2AC47",
-          color: "#D2AC47",
+          border: "6px solid #cf9b53",
+          color: "#cf9b53",
           borderTopRightRadius: "1.2rem",
           borderBottomLeftRadius: "1.2rem",
           backgroundColor: "transparent",
