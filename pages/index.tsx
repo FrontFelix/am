@@ -17,8 +17,8 @@ import NftSlider from "../components/NftSlider";
 import TeamShowcase from "../components/TeamShowcase";
 import ArtistSection from "../components/ArtistSection";
 import { motion } from "framer-motion";
-import "./fonts/textFont.ttf";
-import "./fonts/titleFont.ttf";
+// import "/fonts/textFont.ttf";
+// import "/fonts/titleFont.ttf";
 
 export default function Home() {
   // const profileRoleText = chakra(motion.text, {
@@ -35,7 +35,11 @@ export default function Home() {
             justifyContent={"center"}
           >
             <Box>
-              <Text textStyle="h1" textAlign={{ base: "center" }}>
+              <Text
+                className="testFont"
+                textStyle="h1"
+                textAlign={{ base: "center" }}
+              >
                 REVOLUZING SCOTTISH
               </Text>
               <Text textStyle="h1" textAlign={{ base: "center" }}>

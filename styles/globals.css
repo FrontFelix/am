@@ -5,7 +5,14 @@
 
 @font-face {
   font-family: "textFont";
-  src: url("../pages/fonts/textFont.ttf") format("truetype");
+  src: url("/fonts/textFont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "titleFont";
+  src: url("/fonts/titleFont.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
