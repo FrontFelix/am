@@ -27,8 +27,13 @@ export default function Home() {
 
   return (
     <div className="">
-      <Container pt={{ base: "6rem", lg: "8rem" }} maxW="1200px">
-        <div className="topDiv">
+      <Box pt={{ base: "6rem", lg: "8rem" }}>
+        <Box
+          px={{ base: ".5rem", lg: "0" }}
+          margin={"0 auto"}
+          maxW="1200px"
+          className="topDiv"
+        >
           <Flex
             flexDirection={{ base: "column", lg: "row" }}
             alignItems={"center"}
@@ -67,8 +72,10 @@ export default function Home() {
               />
             </Box> */}
           </Flex>
-        </div>
+        </Box>
         <Box
+          margin={"0 auto"}
+          maxW="1200px"
           overflow={"visible"}
           my={{ base: "5rem", lg: "6rem" }}
           className="heroDiv"
@@ -109,7 +116,6 @@ export default function Home() {
                     height: "20rem",
                     width: "20rem",
                     borderRadius: "1rem",
-                    border: "4px solid #D2AC48",
                     position: "relative",
                   }}
                 >
@@ -120,10 +126,10 @@ export default function Home() {
                       height: "19.9rem",
                       width: "19.9rem",
                     }}
-                    animate={{ scale: [1, 0.9, 1] }}
+                    animate={{ scale: [1, 0.98, 1] }}
                     transition={{ repeat: Infinity, duration: 1.5 }}
                     alt="logo"
-                    src={"/images/logo.png"}
+                    src={"/images/testBottle.jpeg"}
                   />
                 </Box>
               </Box>
@@ -132,13 +138,13 @@ export default function Home() {
         </Box>
 
         {/* RoadMap */}
-        <Box my={"5rem"}>
-          <Text textAlign={{ base: "center", lg: "left" }} textStyle="h4">
+        <Box mt={"9rem"}>
+          {/* <Text textAlign={{ base: "center", lg: "left" }} textStyle="h4">
             First stage of Albannach Mòr
           </Text>
           <Text textAlign={{ base: "center", lg: "left" }} textStyle="h2">
             Roadmap
-          </Text>
+          </Text> */}
           <Roadmap />
         </Box>
         {/* RoadMap */}
@@ -148,28 +154,22 @@ export default function Home() {
         {/* Artist */}
 
         {/* Team Showcase */}
-        <Box py={"3rem"}>
-          <Text textStyle="h4">Meet the team</Text>
-          <Text textStyle="h2">Founders</Text>
-          <TeamShowcase />
-        </Box>
         {/* Team Showcase */}
 
         {/* NFT SHOWCASE */}
         <Box mt={{ base: "", lg: "7rem" }}>
-          <Text textStyle="h4">Our art</Text>
-          <Text textStyle="h2">AM NFTS</Text>
           <NftSlider />
         </Box>
         {/* NFT SHOWCASE */}
+        <Box pt={"6rem"}>
+          {/* <Text textStyle="h4">Meet the team</Text>
+          <Text textStyle="h2">Founders</Text> */}
+          <TeamShowcase />
+        </Box>
         {/* FAQ */}
-        <Text mt={"7rem"} textStyle="h4">
-          Frequently asked questions
-        </Text>
-        <Text textStyle="h2">FAQ</Text>
         <Faq />
         {/* FAQ */}
-      </Container>
+      </Box>
     </div>
   );
 }

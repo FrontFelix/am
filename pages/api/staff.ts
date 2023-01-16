@@ -12,21 +12,6 @@ export interface StaffTeam {
 
 export const staffTeam: StaffTeam[] = [
   {
-    id: "David",
-    name: "David aka TheJaff",
-    description: {
-      row1: "Hi, I'm David. I was born and raised in Glasgow and have a diverse background in the construction industry. I have worked my way up from apprentice to site manager to business owner, gaining valuable experience and skills along the way.",
-      row2: "In addition to my construction background, I have a strong passion for WEB3 and have been involved in this space for a number of years, participating in various communities and serving as staff for several projects. I am always seeking new opportunities to learn about and stay up-to-date with the latest WEB3 advancements.",
-      row3: "In my free time, I enjoy reading about and researching new and innovative ways in which the world will work in the future. I also value spending time with my family and friends and have a passion for collecting whisky.",
-    },
-    faceBook: "xx",
-    imageSrc: "/images/jaff2.jpeg",
-    hoverImage: "/images/jaff1.jpeg",
-    Twitter: "test",
-    linkedIn: "Test",
-    role: "Co-Founder & Business Director",
-  },
-  {
     id: "Jake",
     name: "Jake aka Brennz",
     description: {
@@ -40,6 +25,21 @@ export const staffTeam: StaffTeam[] = [
     Twitter: "test",
     linkedIn: "Test",
     role: "Co-Founder & Commercial Director",
+  },
+  {
+    id: "David",
+    name: "David aka TheJaff",
+    description: {
+      row1: "Hi, I'm David. I was born and raised in Glasgow and have a diverse background in the construction industry. I have worked my way up from apprentice to site manager to business owner, gaining valuable experience and skills along the way.",
+      row2: "In addition to my construction background, I have a strong passion for WEB3 and have been involved in this space for a number of years, participating in various communities and serving as staff for several projects. I am always seeking new opportunities to learn about and stay up-to-date with the latest WEB3 advancements.",
+      row3: "In my free time, I enjoy reading about and researching new and innovative ways in which the world will work in the future. I also value spending time with my family and friends and have a passion for collecting whisky.",
+    },
+    faceBook: "xx",
+    imageSrc: "/images/jaff2.jpeg",
+    hoverImage: "/images/jaff1.jpeg",
+    Twitter: "test",
+    linkedIn: "Test",
+    role: "Co-Founder & Business Director",
   },
   {
     id: "Justin",

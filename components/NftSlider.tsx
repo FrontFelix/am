@@ -1,11 +1,15 @@
-import { Box, Flex, Button, IconButton } from "@chakra-ui/react";
+import { Box, Flex, Button, IconButton, Text } from "@chakra-ui/react";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper";
 import ArrowIcon from "./icons/arrowIcon";
 export default function NftSlider() {
   return (
-    <Box py={"2rem"}>
+    <Box margin={"0 auto"} maxW="1200px" py={"2rem"}>
+      <Text textStyle="h4">Our art</Text>
+      <Text mb={"2rem"} textStyle="h2">
+        AM NFTS
+      </Text>
       <Flex>
         {/* <Button mr={"1rem"} display={"block"} alignSelf={"center"} id="prevBtn">
           Prev
@@ -54,7 +58,7 @@ export default function NftSlider() {
               <Image
                 layout="fill"
                 alt="test"
-                src={"/images/nft.png"}
+                src={"/images/nft1.png"}
                 style={{
                   objectFit: "cover",
                 }}
@@ -66,7 +70,7 @@ export default function NftSlider() {
               <Image
                 layout="fill"
                 alt="test"
-                src={"/images/nft.png"}
+                src={"/images/nft1.png"}
                 style={{
                   objectFit: "cover",
                 }}
@@ -78,7 +82,7 @@ export default function NftSlider() {
               <Image
                 layout="fill"
                 alt="test"
-                src={"/images/nft.png"}
+                src={"/images/nft1.png"}
                 style={{
                   objectFit: "cover",
                 }}
@@ -90,7 +94,7 @@ export default function NftSlider() {
               <Image
                 layout="fill"
                 alt="test"
-                src={"/images/nft.png"}
+                src={"/images/nft1.png"}
                 style={{
                   objectFit: "cover",
                 }}
@@ -102,7 +106,7 @@ export default function NftSlider() {
               <Image
                 layout="fill"
                 alt="test"
-                src={"/images/nft.png"}
+                src={"/images/nft1.png"}
                 style={{
                   objectFit: "cover",
                 }}

@@ -1,4 +1,4 @@
-import { Box, Button, Flex } from "@chakra-ui/react";
+import { Box, Button, Flex, Text } from "@chakra-ui/react";
 import { useEffect, useRef, useState } from "react";
 import FormStep from "./formStep";
 import IconButton from "./RoadmapButton";
@@ -35,7 +35,22 @@ export default function Roadmap() {
   const progress = ((active - 1) / (steps.length - 1)) * 100 + "%";
 
   return (
-    <Box mt={"2rem"}>
+    <Box
+      margin={"0 auto"}
+      maxW="1200px"
+      pb={{ base: "10rem", lg: "0" }}
+      mt={"2rem"}
+    >
+      <Text textAlign={{ base: "center", lg: "left" }} textStyle="h4">
+        First stage of Albannach Mòr
+      </Text>
+      <Text
+        mb={"2rem"}
+        textAlign={{ base: "center", lg: "left" }}
+        textStyle="h2"
+      >
+        Roadmap
+      </Text>
       {/* ROADMAP BAR */}
       <Flex mb={"1rem"}>
         <IconButton

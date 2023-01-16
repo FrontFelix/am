@@ -47,8 +47,13 @@ export default function Faq() {
     },
   };
   return (
-    <Box mt={"2rem"}>
+    <Box margin={"0 auto"} maxW="1200px" mt={"2rem"}>
+      <Text mt={"7rem"} textStyle="h4">
+        Frequently asked questions
+      </Text>
+      <Text textStyle="h2">FAQ</Text>
       <Text
+        _hover={{ cursor: "pointer" }}
         w={{ base: "100%", lg: "50%" }}
         bg={"#2e2d2a"}
         my={"2rem"}
@@ -86,6 +91,7 @@ export default function Faq() {
       </Box>
 
       <Text
+        _hover={{ cursor: "pointer" }}
         w={{ base: "100%", lg: "50%" }}
         bg={"#2e2d2a"}
         my={"2rem"}
@@ -123,6 +129,7 @@ export default function Faq() {
       </Box>
 
       <Text
+        _hover={{ cursor: "pointer" }}
         bg={"#2e2d2a"}
         my={"2rem"}
         display="block"
@@ -159,6 +166,7 @@ export default function Faq() {
       </Box>
 
       <Text
+        _hover={{ cursor: "pointer" }}
         bg={"#2e2d2a"}
         my={"2rem"}
         display="block"
@@ -195,6 +203,7 @@ export default function Faq() {
       </Box>
 
       <Text
+        _hover={{ cursor: "pointer" }}
         bg={"#2e2d2a"}
         my={"2rem"}
         display="block"

@@ -4,7 +4,13 @@ import { secondaryButtonHover } from "../themes/hoverStyles";
 
 export default function ArtistSection() {
   return (
-    <Box py={"3rem"} my={"10rem"} position={"relative"}>
+    <Box
+      margin={"0 auto"}
+      maxW="1200px"
+      py={"3rem"}
+      my={"10rem"}
+      position={"relative"}
+    >
       {/* <Box
         display={{ base: "none", xl: "block" }}
         top={{ base: "-100rem", lg: "-130rem" }}

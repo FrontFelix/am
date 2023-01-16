@@ -26,7 +26,7 @@ export default function MemberCard({ member }: cardProps) {
     }, 50);
   }
   return (
-    <Box w={{ base: "100%", lg: "33%" }}>
+    <Box my={{ base: "2rem", lg: "0" }} w={{ base: "100%", lg: "33%" }}>
       <Link key={member.id} href={`staff/${member.id}`}>
         <Box m={{ base: "0 auto", lg: "0 auto" }} maxW={"70%"} pos={"relative"}>
           <motion.img

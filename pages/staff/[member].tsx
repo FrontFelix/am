@@ -8,15 +8,15 @@ export default function MemberPage({ member }: any) {
     member.id === "David"
       ? "-15rem"
       : member.id === "Justin"
-      ? "-10rem"
-      : "-7rem"
+      ? "-15rem"
+      : "-15rem"
   );
   return (
-    <Box mb={"30rem"}>
+    <Box mt={"8rem"} mb={"30rem"}>
       <motion.img
         style={{
           objectFit: "cover",
-          objectPosition: "top",
+          objectPosition: member.id === "Jake" ? "center -20rem" : "top",
           width: "100%",
           height: "100vh",
           position: "absolute",

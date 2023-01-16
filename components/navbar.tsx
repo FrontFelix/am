@@ -4,7 +4,6 @@ import {
   Container,
   Flex,
   IconButton,
-  Link,
   Spacer,
   Switch,
   Text,
@@ -14,6 +13,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { secondaryButtonHover } from "../themes/hoverStyles";
 import { useUserContext } from "../utils/context/userContext";
 import HamburgerIcon from "./icons/hamburgerIcon";
+import Link from "next/link";
 import SideBar from "./SideBar";
 
 export default function Navbar() {
@@ -48,17 +48,19 @@ export default function Navbar() {
       >
         <Container py={"2rem"} maxW={"1500px"}>
           <Flex justifyContent={"space-between"} alignItems="center">
-            <Box w={{ base: "50%", lg: "25%" }}>
-              <motion.img
-                width={200}
-                height={200}
-                animate={
-                  isScrolled
-                    ? { scale: 1, transition: { duration: 0.5 } }
-                    : { scale: 1.5, transition: { duration: 0.5 } }
-                }
-                src={"/images/headerLogo.png"}
-              />
+            <Box pl={"2rem"} w={{ base: "40%", lg: "25%" }}>
+              <Link href="/">
+                <motion.img
+                  width={200}
+                  height={200}
+                  animate={
+                    isScrolled
+                      ? { scale: 1, transition: { duration: 0.5 } }
+                      : { scale: 1.5, transition: { duration: 0.5 } }
+                  }
+                  src={"/images/headerLogo.png"}
+                />
+              </Link>
               {/* <Image
             width={20}
             height={20}
@@ -69,11 +71,11 @@ export default function Navbar() {
             </Box>
             {/* <Spacer display={{ base: "none", md: "none", lg: "block" }} /> */}
             <Box w={"50%"} display={{ base: "none", md: "none", xl: "flex" }}>
-              <Flex justifyContent={"center"} w={"100%"}>
+              <Flex gap={"2rem"} justifyContent={"center"} w={"100%"}>
                 <a href="">
                   <p>Team</p>
                 </a>
-                <Link px="1.5rem" href="">
+                <Link href="">
                   <p>Marketplace</p>
                 </Link>
                 <Link href="">
