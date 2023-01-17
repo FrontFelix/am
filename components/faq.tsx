@@ -47,11 +47,22 @@ export default function Faq() {
     },
   };
   return (
-    <Box margin={"0 auto"} maxW="1200px" mt={"2rem"}>
-      <Text mt={"7rem"} textStyle="h4">
+    <Box
+      margin={"0 auto"}
+      maxW="1200px"
+      mt={"2rem"}
+      px={{ base: "1.5rem", xl: "0" }}
+    >
+      <Text
+        textAlign={{ base: "center", lg: "left" }}
+        mt={"7rem"}
+        textStyle="h4"
+      >
         Frequently asked questions
       </Text>
-      <Text textStyle="h2">FAQ</Text>
+      <Text textAlign={{ base: "center", lg: "left" }} textStyle="h2">
+        FAQ
+      </Text>
       <Text
         _hover={{ cursor: "pointer" }}
         w={{ base: "100%", lg: "50%" }}

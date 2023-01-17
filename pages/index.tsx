@@ -29,7 +29,8 @@ export default function Home() {
     <div className="">
       <Box pt={{ base: "6rem", lg: "8rem" }}>
         <Box
-          px={{ base: ".5rem", lg: "0" }}
+          mx={"2rem"}
+          px={{ base: "1.5rem", lg: "0" }}
           margin={"0 auto"}
           maxW="1200px"
           className="topDiv"

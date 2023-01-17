@@ -25,9 +25,14 @@ export default function TeamShowcase() {
         pt={{ base: "2rem", lg: "10rem" }}
         margin={"0 auto"}
         maxW="1200px"
+        px={{ base: "1.5rem", xl: "0" }}
       >
-        <Text textStyle="h4">Meet the team</Text>
-        <Text textStyle="h2">Founders</Text>
+        <Text textAlign={{ base: "center", lg: "left" }} textStyle="h4">
+          Meet the team
+        </Text>
+        <Text textAlign={{ base: "center", lg: "left" }} textStyle="h2">
+          Founders
+        </Text>
         <Flex
           flexDir={{ base: "column", lg: "row" }}
           mt={"2rem"}

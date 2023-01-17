@@ -31,6 +31,7 @@ export default function MemberCard({ member }: cardProps) {
         <Box m={{ base: "0 auto", lg: "0 auto" }} maxW={"70%"} pos={"relative"}>
           <motion.img
             style={{
+              margin: "0 auto",
               objectFit: "cover",
               width: "16rem",
               height: "20rem",

@@ -36,6 +36,7 @@ export default function Roadmap() {
 
   return (
     <Box
+      px={{ base: "1.5rem", xl: "0" }}
       margin={"0 auto"}
       maxW="1200px"
       pb={{ base: "10rem", lg: "0" }}

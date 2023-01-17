@@ -72,9 +72,9 @@ export default function Navbar() {
             {/* <Spacer display={{ base: "none", md: "none", lg: "block" }} /> */}
             <Box w={"50%"} display={{ base: "none", md: "none", xl: "flex" }}>
               <Flex gap={"2rem"} justifyContent={"center"} w={"100%"}>
-                <a href="">
+                <Link aria-disabled={"true"} href="">
                   <p>Team</p>
-                </a>
+                </Link>
                 <Link href="">
                   <p>Marketplace</p>
                 </Link>
@@ -97,12 +97,14 @@ export default function Navbar() {
                   onClick={() => setSideBarState(sidebarState ? false : true)}
                 ></IconButton>
               </Box>
-              <Flex display={{ base: "none", md: "none", xl: "flex" }}>
+              <Flex
+                gap={".3rem"}
+                display={{ base: "none", md: "none", xl: "flex" }}
+              >
                 <IconButton mx=".5rem" aria-label="test"></IconButton>
                 <IconButton aria-label="test"></IconButton>
                 <IconButton mx=".5rem" aria-label="test"></IconButton>
                 <IconButton aria-label="test"></IconButton>
-                <Switch alignSelf={"center"} colorScheme="yellow" />
                 {!signedInUser && (
                   <Button
                     onClick={signIn}

@@ -5,9 +5,20 @@ import { Navigation, Pagination } from "swiper";
 import ArrowIcon from "./icons/arrowIcon";
 export default function NftSlider() {
   return (
-    <Box margin={"0 auto"} maxW="1200px" py={"2rem"}>
-      <Text textStyle="h4">Our art</Text>
-      <Text mb={"2rem"} textStyle="h2">
+    <Box
+      margin={"0 auto"}
+      maxW="1200px"
+      py={"2rem"}
+      px={{ base: "1.5rem", xl: "0" }}
+    >
+      <Text textAlign={{ base: "center", lg: "left" }} textStyle="h4">
+        Our art
+      </Text>
+      <Text
+        textAlign={{ base: "center", lg: "left" }}
+        mb={"2rem"}
+        textStyle="h2"
+      >
         AM NFTS
       </Text>
       <Flex>
@@ -30,7 +41,7 @@ export default function NftSlider() {
           slidesPerView={1}
           breakpoints={{
             850: {
-              width: 640,
+              width: 840,
               slidesPerView: 2,
             },
             // 1000: {
@@ -39,7 +50,7 @@ export default function NftSlider() {
             // },
             1400: {
               width: 1400,
-              slidesPerView: 4,
+              slidesPerView: 3,
             },
           }}
           spaceBetween={40}
@@ -60,7 +71,7 @@ export default function NftSlider() {
                 alt="test"
                 src={"/images/nft1.png"}
                 style={{
-                  objectFit: "cover",
+                  objectFit: "scale-down",
                 }}
               />
             </Box>
@@ -72,7 +83,7 @@ export default function NftSlider() {
                 alt="test"
                 src={"/images/nft1.png"}
                 style={{
-                  objectFit: "cover",
+                  objectFit: "scale-down",
                 }}
               />
             </Box>
@@ -84,7 +95,7 @@ export default function NftSlider() {
                 alt="test"
                 src={"/images/nft1.png"}
                 style={{
-                  objectFit: "cover",
+                  objectFit: "scale-down",
                 }}
               />
             </Box>
@@ -96,7 +107,7 @@ export default function NftSlider() {
                 alt="test"
                 src={"/images/nft1.png"}
                 style={{
-                  objectFit: "cover",
+                  objectFit: "scale-down",
                 }}
               />
             </Box>
@@ -108,7 +119,7 @@ export default function NftSlider() {
                 alt="test"
                 src={"/images/nft1.png"}
                 style={{
-                  objectFit: "cover",
+                  objectFit: "scale-down",
                 }}
               />
             </Box>

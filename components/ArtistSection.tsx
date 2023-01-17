@@ -10,6 +10,7 @@ export default function ArtistSection() {
       py={"3rem"}
       my={"10rem"}
       position={"relative"}
+      px={{ base: "1.5rem", xl: "0" }}
     >
       {/* <Box
         display={{ base: "none", xl: "block" }}
@@ -85,19 +86,29 @@ export default function ArtistSection() {
         >
           studio
         </Text>
-        <Text textAlign={{ base: "center", lg: "left" }}>
+        <Text
+          pr={{ md: "5rem", xl: "0" }}
+          textAlign={{ base: "center", lg: "left" }}
+        >
           SUUM.studio is a multimedia design studio based in Glasgow, we
           specialise in creating 3D moving image design, incorporating
           character, environment, lighting and VFX for film, broadcast,
           marketing, branding and communication projects.
         </Text>
-        <Text textAlign={{ base: "center", lg: "left" }}>
+        <Text
+          pr={{ md: "5rem", xl: "0" }}
+          textAlign={{ base: "center", lg: "left" }}
+        >
           Our clients range from media, cultural and tech to arts,
           entertainment, education and heritage industries. Our team of talented
           artists and designers work alongside skilled animators, editors,
           directors, sound designers and composers to bring ideas to life.
         </Text>
-        <Text pb={"1.4rem"} textAlign={{ base: "center", lg: "left" }}>
+        <Text
+          pr={{ md: "5rem", xl: "0" }}
+          pb={"1.4rem"}
+          textAlign={{ base: "center", lg: "left" }}
+        >
           Our work has been featured on BBC, Sky Arts, Channel 4, Channel 5 and
           National Geographic Channel, in addition to being experienced across
           web, social and mobile platforms. We love creating authentic and
