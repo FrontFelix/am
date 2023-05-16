@@ -83,7 +83,7 @@ export default function Faq() {
           Q1
         </span>
         <span style={{ textDecoration: "underline" }}>
-          When is Albannach Mòr mint
+          What is Albannach Mòr?
         </span>{" "}
       </Text>
       <Box
@@ -96,8 +96,16 @@ export default function Faq() {
         animate={faq1 ? "open" : "close"}
       >
         <Text>
-          Gen 1 is only available to people who fill in the application form and
-          those who are Whisky Club members and the day it to be confirmed{" "}
+          Albannach Mòr is a dynamic and innovative whisky brand that aims to
+          bring a fresh perspective to Scottish whisky. Our goal is to
+          revolutionise the industry by leveraging Web3 technology to create an
+          intriguing outlook on Scottish whisky. By utilising the latest
+          advancements in Web3 and blockchain technology, we intend to bring
+          together whisky enthusiasts from around the world and create a unique,
+          collaborative experience that celebrates the rich history and culture
+          of Scotland's beloved spirit. Join us on this exciting journey as we
+          explore new horizons and push the boundaries of what's possible in the
+          world of whisky.{" "}
         </Text>
       </Box>
 
@@ -120,9 +128,7 @@ export default function Faq() {
         >
           Q2
         </span>
-        <span style={{ textDecoration: "underline" }}>
-          Do you have direct contact with your whisky distillery partnership
-        </span>{" "}
+        <span style={{ textDecoration: "underline" }}>What is Web3?</span>{" "}
       </Text>
       <Box
         as={motion.div}
@@ -133,9 +139,19 @@ export default function Faq() {
         animate={faq2 ? "open" : "close"}
       >
         <Text>
-          Yes, we deal directly with … distillery. Confirming regular updates on
-          both ends to ensure everything is exactly where it needs to be to
-          provide the best possible service to our community.{" "}
+          Web3, or 'Web 3.0', is the next evolution of the internet, which aims
+          to be more decentralised, secure, and user-centric than the current
+          Web 2.0. At its core, web3 is based on blockchain technology, a
+          distributed database that enables secure and transparent transactions
+          without intermediaries like banks or governments, resulting in a more
+          decentralised network. Web3 also includes smart contracts,
+          self-executing contracts with terms written into lines of code,
+          allowing for automated and transparent transactions without
+          third-party enforcement. Overall, web3 seeks to create an open,
+          transparent, and decentralised internet that empowers individuals and
+          communities, rather than relying on centralised institutions. It has
+          the potential to revolutionise industries such as finance, gaming,
+          social media, and even the whisky and wine industry.{" "}
         </Text>
       </Box>
 
@@ -159,7 +175,7 @@ export default function Faq() {
           Q3
         </span>
         <span style={{ textDecoration: "underline" }}>
-          What is the Mint Price
+          What’s the advantages of Web3 in the whisky industry?
         </span>{" "}
       </Text>
       <Box
@@ -171,12 +187,24 @@ export default function Faq() {
         animate={faq3 ? "open" : "close"}
       >
         <Text>
-          Mint price is 0.5 ETH. For those on the whitelist for a discounted
-          mint (Whisky Club, mint price is 0.35 ET{" "}
+          The integration of web3 technology into the whisky industry offers
+          several advantages. First, it provides increased transparency in the
+          supply chain by utilising blockchain to track the production and
+          distribution of whisky, ensuring the authenticity and quality of the
+          product. Second, it allows for greater accessibility to rare and
+          unique bottles of whisky through decentralised marketplaces and
+          auctions, which can connect buyers and sellers from around the world.
+          Finally, it enables the creation of personalised experiences for
+          consumers through the use of non-fungible tokens (NFTs), which can be
+          used to verify ownership of bottles and provide access to exclusive
+          events and content. Overall, the adoption of web3 technology has the
+          potential to revolutionise the whisky industry by enhancing trust,
+          expanding market opportunities, and creating new forms of engagement
+          between producers and consumers.{" "}
         </Text>
       </Box>
 
-      <Text
+      {/* <Text
         _hover={{ cursor: "pointer" }}
         bg={"#2e2d2a"}
         my={"2rem"}
@@ -211,9 +239,9 @@ export default function Faq() {
           you want 1 or 2 mints at time of mint. For the avoidance of doubt, you
           will not be able to mint one and return to mint a second.{" "}
         </Text>
-      </Box>
+      </Box> */}
 
-      <Text
+      {/* <Text
         _hover={{ cursor: "pointer" }}
         bg={"#2e2d2a"}
         my={"2rem"}
@@ -248,7 +276,7 @@ export default function Faq() {
           Only those who have fill in the application form and have a whisky
           club membership will be guaranteed up to 2 mints.{" "}
         </Text>
-      </Box>
+      </Box> */}
 
       {/* <Text
         bg={"#2e2d2a"}

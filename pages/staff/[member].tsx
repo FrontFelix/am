@@ -1,4 +1,4 @@
-import { Box, Container, Flex, Spacer, Text } from "@chakra-ui/react";
+import { Box, Container, Flex, Spacer, Text, Img } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { getStaff, getStaffs, StaffTeam } from "../api/staff";
@@ -13,10 +13,14 @@ export default function MemberPage({ member }: any) {
   );
   return (
     <Box mt={"8rem"} mb={"30rem"}>
-      <motion.img
+      <Img
+        objectPosition={{
+          base: "top",
+          lg: member.id === "Jake" ? "center -20rem" : "top",
+        }}
+        as={motion.img}
         style={{
           objectFit: "cover",
-          objectPosition: member.id === "Jake" ? "center -20rem" : "top",
           width: "100%",
           height: "100vh",
           position: "absolute",

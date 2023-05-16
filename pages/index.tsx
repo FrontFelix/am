@@ -17,19 +17,22 @@ import NftSlider from "../components/NftSlider";
 import TeamShowcase from "../components/TeamShowcase";
 import ArtistSection from "../components/ArtistSection";
 import { motion } from "framer-motion";
+import { useState } from "react";
+import AgeVerification from "../components/AgeVerification";
 // import "/fonts/textFont.ttf";
 // import "/fonts/titleFont.ttf";
 
 export default function Home() {
+  const [nftWebsite, setNFTWebsite] = useState(false);
   // const profileRoleText = chakra(motion.text, {
   //   shouldForwardProp: isValidMotionProp,
   // });
 
   return (
     <div className="">
+      <AgeVerification />
       <Box pt={{ base: "6rem", lg: "8rem" }}>
         <Box
-          mx={"2rem"}
           px={{ base: "1.5rem", lg: "0" }}
           margin={"0 auto"}
           maxW="1200px"
@@ -99,15 +102,14 @@ export default function Home() {
             >
               <Box maxW={{ base: "100%", lg: "60%" }}>
                 <Text textAlign={{ base: "center", lg: "left" }} textStyle="h1">
-                  Powered by WEB3
+                  Albannach Mor
                 </Text>
                 {/* <h1 style={{"lineHeight": "2rem"}}>Powered by Scottish Whisky</h1> */}
                 <Text textAlign={{ base: "center", lg: "left" }}>
                   Albannach Mòr is a groundbreaking project focused on engaging
-                  the next generation of whiskey enthusiasts. Our unique
-                  business model allows holders to invest in top quality artwork
-                  through our decentralized autonomous organization (DAO)
-                  ecosystem.
+                  the next generation of whisky enthusiasts. Our unique business
+                  model allows holders to invest in top quality artwork through
+                  our decentralized autonomous organization (DAO) ecosystem.
                 </Text>
               </Box>
               <Spacer display={{ base: "none", lg: "block" }} />
@@ -126,11 +128,12 @@ export default function Home() {
                       borderRadius: ".7rem",
                       height: "19.9rem",
                       width: "19.9rem",
+                      objectFit: "cover",
                     }}
                     animate={{ scale: [1, 0.98, 1] }}
                     transition={{ repeat: Infinity, duration: 1.5 }}
                     alt="logo"
-                    src={"/images/testBottle.jpeg"}
+                    src={"/images/amglass.jpeg"}
                   />
                 </Box>
               </Box>
@@ -139,15 +142,15 @@ export default function Home() {
         </Box>
 
         {/* RoadMap */}
-        <Box mt={"9rem"}>
-          {/* <Text textAlign={{ base: "center", lg: "left" }} textStyle="h4">
+        {/* <Box mt={"9rem"}>
+          <Text textAlign={{ base: "center", lg: "left" }} textStyle="h4">
             First stage of Albannach Mòr
           </Text>
           <Text textAlign={{ base: "center", lg: "left" }} textStyle="h2">
             Roadmap
-          </Text> */}
-          <Roadmap />
-        </Box>
+          </Text>
+          {nftWebsite && <Roadmap />}
+        </Box> */}
         {/* RoadMap */}
 
         {/* Artist */}
@@ -158,9 +161,11 @@ export default function Home() {
         {/* Team Showcase */}
 
         {/* NFT SHOWCASE */}
-        <Box mt={{ base: "", lg: "7rem" }}>
-          <NftSlider />
-        </Box>
+        {nftWebsite && (
+          <Box mt={{ base: "", lg: "7rem" }}>
+            <NftSlider />
+          </Box>
+        )}
         {/* NFT SHOWCASE */}
         <Box pt={"6rem"}>
           {/* <Text textStyle="h4">Meet the team</Text>

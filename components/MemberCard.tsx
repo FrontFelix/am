@@ -52,26 +52,26 @@ export default function MemberCard({ member }: cardProps) {
             right={"-2rem"}
             pos={"absolute"}
           >
-            <IconButton
-              _hover={whiteToGoldColor}
-              transition={".3s"}
-              variant="iconWhiteTransparent"
-              aria-label="test"
-              icon={<TwitterIcon />}
-            />
-            <IconButton
-              transition={".3s"}
-              py={"2rem"}
-              variant="iconWhiteTransparent"
-              aria-label="test"
-              icon={<LinkedIcon />}
-            />
-            <IconButton
-              transition={".3s"}
-              variant="iconWhiteTransparent"
-              aria-label="test"
-              icon={<FacebooIcon />}
-            />
+            <Link href={member.Twitter}>
+              <IconButton
+                zIndex={10}
+                _hover={whiteToGoldColor}
+                transition={".3s"}
+                variant="iconWhiteTransparent"
+                aria-label="test"
+                icon={<TwitterIcon />}
+              />
+            </Link>
+            <Link href={member.linkedIn}>
+              <IconButton
+                zIndex={10}
+                transition={".3s"}
+                py={"2rem"}
+                variant="iconWhiteTransparent"
+                aria-label="test"
+                icon={<LinkedIcon />}
+              />
+            </Link>
             <Box
               alignSelf={"center"}
               mt={"2rem"}

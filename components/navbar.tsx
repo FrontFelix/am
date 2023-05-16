@@ -36,7 +36,7 @@ export default function Navbar() {
     <Box
       zIndex={"100"}
       top="0"
-      position={{ base: "absolute", lg: "fixed" }}
+      position={{ base: "fixed", lg: "fixed" }}
       w="100%"
     >
       <motion.nav
@@ -72,7 +72,7 @@ export default function Navbar() {
             {/* <Spacer display={{ base: "none", md: "none", lg: "block" }} /> */}
             <Box w={"50%"} display={{ base: "none", md: "none", xl: "flex" }}>
               <Flex gap={"2rem"} justifyContent={"center"} w={"100%"}>
-                <Link aria-disabled={"true"} href="">
+                {/* <Link aria-disabled={"true"} href="">
                   <p>Team</p>
                 </Link>
                 <Link href="">
@@ -80,7 +80,7 @@ export default function Navbar() {
                 </Link>
                 <Link href="">
                   <p>Staking</p>
-                </Link>
+                </Link> */}
               </Flex>
             </Box>
             {/* <Spacer /> */}
@@ -112,7 +112,7 @@ export default function Navbar() {
                     variant="Secondary"
                     _hover={secondaryButtonHover}
                   >
-                    Login
+                    Our Team
                   </Button>
                 )}
               </Flex>
