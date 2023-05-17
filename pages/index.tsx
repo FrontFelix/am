@@ -18,7 +18,6 @@ import TeamShowcase from "../components/TeamShowcase";
 import ArtistSection from "../components/ArtistSection";
 import { motion } from "framer-motion";
 import { useState } from "react";
-import AgeVerification from "../components/AgeVerification";
 // import "/fonts/textFont.ttf";
 // import "/fonts/titleFont.ttf";
 
@@ -30,7 +29,6 @@ export default function Home() {
 
   return (
     <div className="">
-      <AgeVerification />
       <Box pt={{ base: "6rem", lg: "8rem" }}>
         <Box
           px={{ base: "1.5rem", lg: "0" }}

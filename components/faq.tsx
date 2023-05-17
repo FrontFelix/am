@@ -103,8 +103,8 @@ export default function Faq() {
           advancements in Web3 and blockchain technology, we intend to bring
           together whisky enthusiasts from around the world and create a unique,
           collaborative experience that celebrates the rich history and culture
-          of Scotland's beloved spirit. Join us on this exciting journey as we
-          explore new horizons and push the boundaries of what's possible in the
+          of Scotland&apos;s beloved spirit. Join us on this exciting journey as we
+          explore new horizons and push the boundaries of what&apos;s possible in the
           world of whisky.{" "}
         </Text>
       </Box>
@@ -139,7 +139,7 @@ export default function Faq() {
         animate={faq2 ? "open" : "close"}
       >
         <Text>
-          Web3, or 'Web 3.0', is the next evolution of the internet, which aims
+          Web3, or &apos;Web 3.0&apos;, is the next evolution of the internet, which aims
           to be more decentralised, secure, and user-centric than the current
           Web 2.0. At its core, web3 is based on blockchain technology, a
           distributed database that enables secure and transparent transactions
@@ -175,7 +175,7 @@ export default function Faq() {
           Q3
         </span>
         <span style={{ textDecoration: "underline" }}>
-          What’s the advantages of Web3 in the whisky industry?
+          What&apos;s the advantages of Web3 in the whisky industry?
         </span>{" "}
       </Text>
       <Box
